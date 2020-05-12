@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Group-Four-Loop/Philip_Proxy/issues"
   },
-  "homepage": "https://github.com/Group-Four-Loop/Philip_Proxy#readme"
+  "homepage": "https://github.com/Group-Four-Loop/Philip_Proxy#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
