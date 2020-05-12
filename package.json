@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Group-Four-Loop/Philip_Proxy#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
