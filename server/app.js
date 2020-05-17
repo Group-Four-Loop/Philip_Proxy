@@ -11,13 +11,13 @@ app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 // app.use(cors());
 
-
+// http://13.57.207.50:3333/
 
 
 //Route paths
 app.get('/items', (req, res) => {
-  
-  res.redirect('http://localhost:1234/items')
+  //could have your axios.get() here, which would avoid CORS errors
+  res.redirect('http://54.219.237.16:1235')
 })
 
 //GET request to the items endpoint
@@ -25,11 +25,11 @@ app.get('/items', (req, res) => {
 //send data back to client
 
 app.get('/shoppingcart', (req, res) => {
-  res.redirect('http://localhost:8080' + req.url)
+  res.redirect('http://13.57.207.50:3333' + req.url)
 })
 
 app.get('/api/looks', (req, res) => {
-  res.redirect('http://localhost:3001' + req.url)
+  res.redirect('http://3.101.47.20:3000' + req.url)
 })
 
 //need to serve static index.html file
