@@ -12,7 +12,7 @@ RUN npm install
 
 # RUN npm global add nodemon
 
-EXPOSE 7777
+EXPOSE 3000
 
 # RUN npm run webpack
 
