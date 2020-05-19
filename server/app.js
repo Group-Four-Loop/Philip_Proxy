@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, '../client')));
 
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
-// app.use(cors());
+app.use(cors());
 
 // http://13.57.207.50:3333/
 
@@ -17,8 +17,11 @@ app.use(express.urlencoded({ extended: true })); // for parsing application/x-ww
 //Route paths
 app.get('/items', (req, res) => {
   //could have your axios.get() here, which would avoid CORS errors
-  res.redirect('http://54.219.237.16:1235')
+  console.log('REQ.URL: ', req.url)
+  res.redirect('http://54.219.237.16:1235' + req.url)
 })
+
+// /axios
 
 //GET request to the items endpoint
 //we want to get that data back from the endpoint.
@@ -27,6 +30,7 @@ app.get('/items', (req, res) => {
 app.get('/shoppingcart', (req, res) => {
   res.redirect('http://13.57.207.50:3333' + req.url)
 })
+
 
 app.get('/api/looks', (req, res) => {
   res.redirect('http://3.101.47.20:3000' + req.url)
